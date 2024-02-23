@@ -16,7 +16,7 @@ const TodoForm = ({ addTask, editTask, editingTask }) => {
 
   const onClick = (e) => {
     e.preventDefault();
-    if (!taskData.title) {
+    if ((!taskData.title) || (!taskData.date)) {
       alert('Please add a task title');
       return false;
     }
